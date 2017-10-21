@@ -12,7 +12,9 @@ pip install -r requirements.txt
 
 # Running the server
 ```
-python app.py
+export FLASK_APP=app.py
+export FLASK_DEBUG=1
+python -m flask run
 ```
 
 Then load <http://localhost:5000/>

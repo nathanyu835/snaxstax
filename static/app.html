@@ -1,0 +1,76 @@
+<!doctype html>
+<html ng-app="snaxstaxApp">
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+  <script src="js/angular.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  
+  <title> </title>
+</head>
+<body ng-controller="mainAppController">
+
+  <!-- top of page/navbar -->
+  <div class="pure-menu pure-menu-horizontal black-text">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item menu-header-item">Snax</li>          
+      </ul>
+      
+      <ul class="pure-menu-list  menu-right">
+          <li class="pure-menu-item menu-header-item">Logged in as Mark Otto</li>
+      </ul>
+  </div>
+  
+
+          
+  <!-- Content -->
+  <div class="pure-g content" ontouchstart="">
+
+      <div class="pure-u-3-24 a">
+          <div class="inside pure-u-5-5">
+              <button class="ctrl-standard typ-subhed fx-bubbleDown">  Button </button>
+              <a href="" class="btn-sketch space-left"><span>Button</span></a>            
+          </div>
+          <div class="inside  pure-u-5-5">
+              <a href="" class="btn-sketch space-left"><span>Button</span></a>
+          </div>
+          <div class="inside pure-u-5-5">
+              <a href="" class="btn-sketch space-left"><span>Button</span></a>
+          </div>
+      </div>
+
+      <!-- -->
+      <div class="pure-u-9-24 b">
+          <div class="inside votebox">
+              <div ng-repeat="place in places"> 
+                <span> {{place}} </span>
+                <input type="checkbox">
+              </div>
+          </div>
+      </div>
+
+      <div class="pure-u-5-24 c">
+          Vote Weights:
+          <div class="inside" ng-repeat="person in people">
+            {{person.name}}
+            {{person.weight}}
+          </div>
+          <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+          
+      </div>
+    </div>
+
+
+  </div>
+  
+
+
+  <script src="/start.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  
+</body>
+</html>
